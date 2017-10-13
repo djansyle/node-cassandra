@@ -1,4 +1,4 @@
-FROM node:8.6.0
+FROM circleci/node:8.6.0
 
 RUN echo "deb http://www.apache.org/dist/cassandra/debian 311x main" | tee -a /etc/apt/sources.list.d/cassandra.sources.list \
     && curl https://www.apache.org/dist/cassandra/KEYS | apt-key add - \
