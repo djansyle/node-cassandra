@@ -8,7 +8,5 @@ RUN echo "deb http://www.apache.org/dist/cassandra/debian 311x main" | tee -a /e
     && apt install -t jessie-backports openjdk-8-jre-headless ca-certificates-java cassandra -y
 
 COPY cassandra /etc/init.d
-COPY entrypoint.sh /usr/local/bin
-RUN chmod u+x /etc/init.d/cassandra /usr/local/bin/entrypoint.sh
-ENTRYPOINT ["entrypoint.sh"]
+RUN chmod u+x /etc/init.d/cassandra
 
